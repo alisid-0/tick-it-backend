@@ -1,8 +1,6 @@
-from django.shortcuts import render
+from rest_framework import generics
 from .models import Venue, Event
 from .serializers import VenueSerializer, EventSerializer
-from rest_framework import generics
-# Create your views here.
 
 class VenueList(generics.ListCreateAPIView):
     queryset = Venue.objects.all()
