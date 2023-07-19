@@ -11,6 +11,7 @@ class Venue(models.Model):
     country = models.CharField(max_length=50)
     capacity = models.IntegerField()
     website = models.CharField(max_length=255)
+    picture_link = models.URLField(blank=True, null=True)
 
     def __str__(self) -> str:
         return self.name
@@ -23,6 +24,6 @@ class Event(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     venue = models.ForeignKey(Venue, on_delete=models.CASCADE, related_name='events')
-
+    picture_link = models.URLField(blank=True, null=True)
     def __str__(self) -> str:
         return self.name
