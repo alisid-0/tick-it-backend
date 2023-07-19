@@ -11,7 +11,7 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
         source = 'venue'
     )
     event_url = serializers.ModelSerializer.serializer_url_field(
-        view_name='venue-detail'
+        view_name='event-detail'
     )
 
     class Meta:
