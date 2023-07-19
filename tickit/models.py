@@ -14,17 +14,18 @@ class Venue(models.Model):
     picture_link = models.URLField(blank=True, null=True)
 
     def __str__(self) -> str:
-        return str({
-            "id":self.id, 
-            "name":self.name, 
-            "address": self.address,
-            "city": self.city,
-            "state": self.state,
-            "country": self.country,
-            "capacity": self.capacity,
-            "website": self.website,
-            "picture_link": self.picture_link
-            })
+        return self.name
+        # return str({
+        #     "id":self.id, 
+        #     "name":self.name, 
+        #     "address": self.address,
+        #     "city": self.city,
+        #     "state": self.state,
+        #     "country": self.country,
+        #     "capacity": self.capacity,
+        #     "website": self.website,
+        #     "picture_link": self.picture_link
+        #     })
 
 
 class Event(models.Model):

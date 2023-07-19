@@ -7,8 +7,8 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
         view_name='venue-detail',
         read_only=True
     )
-    venue_info = serializers.StringRelatedField(
-        source = 'venue'
+    venue_name = serializers.StringRelatedField(
+        source='venue'
     )
     event_url = serializers.ModelSerializer.serializer_url_field(
         view_name='event-detail'
@@ -17,7 +17,7 @@ class EventSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Event
         fields = [
-            'id', 'event_url', 'description', 'date', 'start_time', 'end_time', 'picture_link', 'venue', 'venue_info'
+            'id', 'event_url', 'description', 'date', 'start_time', 'end_time', 'picture_link', 'venue', 'venue_name'
         ]
 
 
