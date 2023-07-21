@@ -139,9 +139,30 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:8000",
-    "http://localhost:5173",
-    "http://54.193.32.199:8000",
-    "http://0.0.0.0:8000",
+# CSRF_TRUSTED_ORIGINS = [
+#     "http://localhost:8000",
+#     "http://localhost:5173",
+#     "http://54.193.32.199:8000",
+#     "http://0.0.0.0:8000",
+# ]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
 ]
